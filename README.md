@@ -1,10 +1,10 @@
-#PROJECT 4: Mobile Web Specialist Restaurant Reviews App: Stage 1
+# PROJECT 4: Mobile Web Specialist Restaurant Reviews App: Stage 1
 
 This project is the updated version of [Restaurants Reviews](https://github.com/udacity/mws-restaurant-stage-1.git) as we're asked the missing functionalities. We basically were asked to make sure that this application works online and offline-first at the same time. We had also to make it responsive to all kinds of devices. In addition, we're asked to also use the [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/) in order to provide accessibilities to everyone. Globally, this application provides not only responsiveness, online and offline access, but it also provides accessibilities to everyone include the persons with disabilities. 
 
 ##How to run it:
     
-#*First of all, you have to make these commands from your terminal:
+#### First of all, you have to make these commands from your terminal:
     
 *   Because we will be running this program with Python, we have to make sure it's installed. Check which Python's version it's installed on your computer:
     `"python -V"`
