@@ -15,7 +15,7 @@ This project is the updated version of [Restaurants Reviews](https://github.com/
 *   For version Python 3, run this:
     `"python3 -m http.server 8000"`
 
-*   To explore the application, please go to your browser and paste click: [yourLocalHost](http://localhost:8000)
+*   To explore the application, please click to go to your default browser or copy and paste in your favorite browser: [yourLocalHost](http://localhost:8000)
 
 
 ##### Note: I will recommend to use Chrome Canary for the most recent updates. Aslo, remember to download Python just in case it's not                    installed on your local machine.
