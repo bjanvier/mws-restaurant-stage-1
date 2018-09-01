@@ -2,7 +2,7 @@
 
 This project is the updated version of [Restaurants Reviews](https://github.com/udacity/mws-restaurant-stage-1.git) as we're asked the missing functionalities. We basically were asked to make sure that this application works online and offline-first at the same time. We had also to make it responsive to all kinds of devices. In addition, we're asked to also use the [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/) in order to provide accessibilities to everyone. Globally, this application provides not only responsiveness, online and offline access, but it also provides accessibilities to everyone include the persons with disabilities. 
 
-##How to run it:
+## How to run it:
     
 #### First of all, you have to make these commands from your terminal:
     
@@ -18,7 +18,7 @@ This project is the updated version of [Restaurants Reviews](https://github.com/
 *   To explore the application, please go to your browser and paste click: [yourLocalHost](http://localhost:8000)
 
 
-#####   Note: I will recommend to use Chrome Canary for the most recent updates. Aslo, remember to download Python just in case it's not                    installed on your local machine.
+##### Note: I will recommend to use Chrome Canary for the most recent updates. Aslo, remember to download Python just in case it's not                    installed on your local machine.
 
 
 ## D E P E N D E N C I E S:
@@ -27,12 +27,12 @@ This project is the updated version of [Restaurants Reviews](https://github.com/
 *   [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/#roles)
 *   [Font Awesome](https://fontawesome.com/)
 *   [WebAIM](https://webaim.org/techniques/keyboard/accesskey)
-*   [NC STATE UNIVERSITY:][IT Accessibility](https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/)
+*   [NC STATE UNIVERSITY: IT Accessibility](https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/)
 *   [MDN: Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
-*   (W3SCHOOL)[https://www.w3schools.com]
+*   [W3SCHOOL](https://www.w3schools.com)
 *   [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
 *   [The Service Worker Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
-*   [Adding a Service Worker and Offline into your Web App]
+*   [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/)
 
 
      
