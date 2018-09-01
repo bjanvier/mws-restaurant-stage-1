@@ -8,7 +8,7 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 8000 // Change this to your server port
+    const port = 8000; // Change this to your server port
     return `http://localhost:${port}/data/restaurants.json`;
   }
 
@@ -102,6 +102,7 @@ class DBHelper {
       }
     });
   }
+  
 
   /**
    * Fetch all neighborhoods with proper error handling.
@@ -145,7 +146,7 @@ class DBHelper {
   static urlForRestaurant(restaurant) {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
-
+  
   /**
    * Restaurant image URL.
    */
@@ -159,13 +160,22 @@ class DBHelper {
    static mapMarkerForRestaurant(restaurant, map) {
     // https://leafletjs.com/reference-1.3.0.html#marker  
     const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
-      {title: restaurant.name,
+      {
+      title: restaurant.name, //tooltip to display the destination from the map
       alt: restaurant.name,
       url: DBHelper.urlForRestaurant(restaurant)
       })
       marker.addTo(newMap);
     return marker;
   } 
+
+
+
+
+
+
+
+
   /* static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,

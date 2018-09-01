@@ -1,32 +1,39 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+#PROJECT 4: Mobile Web Specialist Restaurant Reviews App: Stage 1
 
-## Project Overview: Stage 1
+This project is the updated version of [Restaurants Reviews](https://github.com/udacity/mws-restaurant-stage-1.git) as we're asked the missing functionalities. We basically were asked to make sure that this application works online and offline-first at the same time. We had also to make it responsive to all kinds of devices. In addition, we're asked to also use the [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/) in order to provide accessibilities to everyone. Globally, this application provides not only responsiveness, online and offline access, but it also provides accessibilities to everyone include the persons with disabilities. 
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+##How to run it:
+    
+#*First of all, you have to make these commands from your terminal:
+    
+    *   Because we will be running this program with Python, we have to make sure it's installed. Check which Python's version it's installed on your computer:
+    `<addr>` python -V
+    
+    *   For version Python 2.x, run this from terminal:
+    `<addr>` python -m SimpleHTTPServer 8000
 
-### Specification
+    *   For version Python 3, run this:
+    `<addr>` python3 -m http.server 8000
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+    *   To explore the application, please go to your browser and paste this:
+    `<addr>`http://localhost:8000
 
-### What do I do from here?
-
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
-
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
-
-## Leaflet.js and Mapbox:
-
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
-
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
+#####   Note: I will recommend to use Chrome Canary for the most recent updates. Aslo, remember to download Python just in case it's not                    installed on your local machine.
 
 
+## D E P E N D E N C I E S:
 
+    *   [Udacity Classroom](https://classroom.udacity.com/)
+    *   [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/#roles)
+    *   [Font Awesome](https://fontawesome.com/)
+    *   [WebAIM](https://webaim.org/techniques/keyboard/accesskey)
+    *   [NC STATE UNIVERSITY:][IT Accessibility](https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/)
+    *   [MDN: Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
+    *   (W3SCHOOL)[https://www.w3schools.com]
+    *   [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
+    *   [The Service Worker Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
+    *   [
+Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/)
+
+
+     
