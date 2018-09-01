@@ -7,33 +7,33 @@ This project is the updated version of [Restaurants Reviews](https://github.com/
 #*First of all, you have to make these commands from your terminal:
     
     *   Because we will be running this program with Python, we have to make sure it's installed. Check which Python's version it's installed on your computer:
-    `<addr>` python -V
+    `python -V`
     
     *   For version Python 2.x, run this from terminal:
-    `<addr>` python -m SimpleHTTPServer 8000
+    `python -m SimpleHTTPServer 8000`
 
     *   For version Python 3, run this:
-    `<addr>` python3 -m http.server 8000
+    ` python3 -m http.server 8000`
 
-    *   To explore the application, please go to your browser and paste this:
-    `<addr>`http://localhost:8000
+    *   To explore the application, please go to your browser and paste click:
+[yourLocalHost](http://localhost:8000)
+
 
 #####   Note: I will recommend to use Chrome Canary for the most recent updates. Aslo, remember to download Python just in case it's not                    installed on your local machine.
 
 
 ## D E P E N D E N C I E S:
 
-    *   [Udacity Classroom](https://classroom.udacity.com/)
-    *   [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/#roles)
-    *   [Font Awesome](https://fontawesome.com/)
-    *   [WebAIM](https://webaim.org/techniques/keyboard/accesskey)
-    *   [NC STATE UNIVERSITY:][IT Accessibility](https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/)
-    *   [MDN: Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
-    *   (W3SCHOOL)[https://www.w3schools.com]
-    *   [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
-    *   [The Service Worker Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
-    *   [
-Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/)
+*   [Udacity Classroom](https://classroom.udacity.com/)
+*   [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/#roles)
+*   [Font Awesome](https://fontawesome.com/)
+*   [WebAIM](https://webaim.org/techniques/keyboard/accesskey)
+*   [NC STATE UNIVERSITY:][IT Accessibility](https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/)
+*   [MDN: Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
+*   (W3SCHOOL)[https://www.w3schools.com]
+*   [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
+*   [The Service Worker Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
+*   [Adding a Service Worker and Offline into your Web App]
 
 
      
