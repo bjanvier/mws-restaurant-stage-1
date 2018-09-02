@@ -81,7 +81,7 @@ self.addEventListener('activate', function(event) {
                 function(response) {
                   // Checking if the request was unsuccessful
                   if (!response.ok) {
-                    console.log('Unsuccessful operation', response)
+                    console.log('Caches responses', response)
                     return response;
                   }
      
