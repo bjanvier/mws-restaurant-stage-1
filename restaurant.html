@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,12 +17,14 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1 tabindex="0"><a aria-label="Restaurant Reviews" role="link" href="/">Restaurant Reviews</a></h1>
+      <h1 tabindex="0">
+        <a aria-label="Restaurant Reviews" role="link" href="/">Restaurant Reviews</a>
+      </h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li id="homepage" tabindex="1">
-          <a aria-labelledby="Home" role="link" title="homepage" class="fa fa-arrow-circle-left" href="/"></a>
+    <ul aria-label="Breadcrumb" id="breadcrumb" >
+      <li id="homepage" tabindex="0">
+          <a aria-labelledby="Home" aria-current="page" role="link" title="homepage" class="fa fa-arrow-circle-left" href="/"></a>
       </li>
     </ul>
     <!-- End breadcrumb -->
@@ -35,25 +37,22 @@
     <!-- Beginning map -->
     <article role="article">
          <section id="map-container">
-            <div id="map"></div>
+            <div aria-current="location" role="application" aria-label="The current Map box" id="map"></div>
         </section>
         <!-- End map -->
         <section class="restaurant-and-reviews">
        <!-- Beginning restaurant -->
         <section id="restaurant-container">
-          <a id="restaurant-link">
-            <img onclick="restaurantImgLink()" tabindex="3" id="restaurant-img">
-          </a>
-            
-            <h1 tabindex="2" id="restaurant-name"></h1>
-            <p aria-live="polite" tabindex="4" id="restaurant-cuisine"></p>
-            <p aria-live="polite" tabindex="5" id="restaurant-address"></p>
-            <table tabindex="6" id="restaurant-hours"></table>
+            <img id="restaurant-img">
+            <h2 id="restaurant-name"></h2>
+            <p aria-live="polite"id="restaurant-cuisine"></p>
+            <p aria-live="polite" id="restaurant-address"></p>
+            <table id="restaurant-hours"></table>
         </section>
         <!-- end restaurant -->
          <!-- Beginning reviews -->
-        <section tabindex="7" id="reviews-container">
-           <ul tabindex="8" id="reviews-list"></ul>
+        <section id="reviews-container">
+           <ul id="reviews-list"></ul>
         </section>
         </section>
       </article>

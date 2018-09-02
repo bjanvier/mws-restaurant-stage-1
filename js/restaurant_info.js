@@ -72,9 +72,16 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
    */
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
-  name.title = restaurant.name;
+  name.title = `This restaurant's name is ${restaurant.name}`;
   name.setAttribute('aria-live', 'polite');
   name.setAttribute('aria-labelledby', restaurant.name);
+
+  /**
+   * aria-current="location" role="application" aria-label="The current Map box"
+   */
+  const map = document.getElementById('map');
+  map.title = `The map of ${restaurant.name}`;
+  map.setAttribute('aria-label', `the map box of ${restaurant.name}`)
 
   /**
    * addresses accessibilities
@@ -91,7 +98,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.alt = restaurant.name;//
   image.setAttribute('role', 'presentation');
-  image.title =`image of ${restaurant.name}'s restaurant `;//when the user hover over the image, he/she will see the restaurant's name displays
+  image.title =`The image of ${restaurant.name}'s restaurant `;//when the user hover over the image, he/she will see the restaurant's name displays
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
@@ -125,7 +132,6 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     row.setAttribute('role', 'rowgroup');
 
     const day = document.createElement('td');
-    day.setAttribute('role', 'row');
     day.innerHTML = key;
     day.title = key;
     day.setAttribute('role', 'cell');
@@ -134,7 +140,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     row.appendChild(day);
 
     const time = document.createElement('td');
-    time.setAttribute('role', 'row');
+    time.setAttribute('role', 'cell');
     time.innerHTML = operatingHours[key];
     time.setAttribute('aria-labelledby', operatingHours[key]);
     time.setAttribute('aria-live', 'polite');

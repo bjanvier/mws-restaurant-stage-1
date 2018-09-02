@@ -1,6 +1,11 @@
+/**
+ * we open our directory( CacheStorage.open() as described by MDN ==> https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll)
+ *  to create new caches,
+ *  then add all the files we want to be accessible offline first
+ */
 self.addEventListener('install', function(event) {
  event.waitUntil(
-   caches.open('mws-restaurant-stage-1-static-v61')
+   caches.open('mws-restaurant-stage-1-static-v1')
     .then(
         function(cache) { //opening static cache name
              return cache.addAll([
@@ -34,60 +39,65 @@ self.addEventListener('install', function(event) {
     );
 });
 
-
+/**
+ * Updates
+ */
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys()
-        .then(function(cacheNames) {
-              return Promise.all( cacheNames.filter(
+      .then(
+        function(cacheNames) {
+              return Promise.all( 
+                cacheNames.filter(
                  function(cacheName) {
                      return cacheName.startsWith('mws-restaurant-') && 
                             cacheName != staticCacheName;
                   }).map(function(cacheName) {
-                          return caches.delete(cacheName); //deleteling the old caches
+                          return caches.delete(cacheName); //deleting the old caches
                   })
               );
           })
         );
     });
 
-
-self.addEventListener('fetch', function(event) {
-
-    var requestUrl = new URL(event.request.url);
-  //log the requests made from the parent page.
-    console.log(requestUrl);
-   
-    //we update to allow this app to work offline-fisrt
-    event.respondWith( //setting the "cache falling back to network"
-      caches.match(event.request)
-        .then(
-          function(response) {
-            if (response){
-              return response;
-              // return response || fetch(event.request);
-              // return fetch(event.request); //=> we'll use this in order to allow online users to be the first
-            }
-        // })
-        return fetch(event.request)
+    /**
+     * Setting the offline accessibilities so the user will be able to 
+     * visit the pages he visited when he was online
+     */
+    self.addEventListener('fetch', function(event) {
+      event.respondWith(
+        caches.match(event.request)
           .then(
-            function(response){
-              if (response.status === 404){
-                console.error('Network not found');
-                // fetch('/img/dr-evil.gif') it should display a gif image in case something goes wrong
+            function(response) {
+            if (response) {
+              return response;
             }
-              return response
-            });
-        })
-        //in case this app fails to cache something for the network behaviors, this generic fallback will come for help
-         .catch( 
-           function(){
-             return caches.match('/index.html');
-        }).catch(
-           function(){
-             return caches.match('/restaurants.html');
-           }
-         )
-    );
-   });
-
+      /**
+       * Duplicating our existing Request 
+       * //https://developer.mozilla.org/en-US/docs/Web/API/Request/clone
+       */
+          return fetch(event.request.clone()) 
+            .then(
+                function(response) {
+                  // Checking if the request was unsuccessful
+                  if (!response.ok) {
+                    console.log('Unsuccessful operation', response)
+                    return response;
+                  }
+     
+                  var requestCopy = response.clone();
+        
+              caches.open('mws-restaurant-stage-1-static-v1') 
+                  .then(
+                    function(cache) {
+                      cache.put(event.request, requestCopy);  //combining their values
+                  });
+                  return response;
+                  })
+                  .catch(function(e) {
+                      console.error('Fetching operation failed:', e);
+                  throw e;
+              });
+            })
+        );
+    });

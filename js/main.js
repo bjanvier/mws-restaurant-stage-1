@@ -33,8 +33,17 @@ fetchNeighborhoods = () => {
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
   neighborhoods.forEach(neighborhood => {
+    /**
+     * the de
+     */
+   
+
+
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
+    option.title = neighborhood;
+    option.setAttribute('role', 'link');
+    option.setAttribute('aria-labelledby', neighborhood);
     option.value = neighborhood;
     select.append(option);
   });
@@ -63,7 +72,9 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
+    option.title = cuisine;
     option.setAttribute('role', 'link');
+    option.setAttribute('aria-lebelledby', cuisine);
     // option.setAttribute('tabindex', '0');
     option.value = cuisine;
     select.append(option);
@@ -196,6 +207,7 @@ createRestaurantHTML = (restaurant) => {
   more.append(span);
   li.append(more);
 
+  
   return li
 }
 
