@@ -80,7 +80,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
    * aria-current="location" role="application" aria-label="The current Map box"
    */
   const map = document.getElementById('map');
-  map.title = `The map of ${restaurant.name}`;
+  map.title = `The map box of ${restaurant.name}`;
   map.setAttribute('aria-label', `the map box of ${restaurant.name}`)
 
   /**
@@ -89,7 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.setAttribute('aria-live', 'polite');
   address.setAttribute('aria-labelledby', restaurant.address);
-  address.title = restaurant.address;
+  address.title = `The ${restaurant.address}'s address`;
   address.innerHTML = restaurant.address;
 
   /**
@@ -144,7 +144,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     time.innerHTML = operatingHours[key];
     time.setAttribute('aria-labelledby', operatingHours[key]);
     time.setAttribute('aria-live', 'polite');
-    time.title = operatingHours[key];
+    time.title = `Operating hours are ${operatingHours[key]}`;
     row.appendChild(time);
 
     hours.appendChild(row);
@@ -164,7 +164,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   /**
    * review's title accessibilities
    */
-  const aTitle = document.createElement('h2');
+  const aTitle = document.createElement('h3');
   aTitle.innerHTML = 'Reviews';
   aTitle.setAttribute('aria-labelledby', 'Review');
   aTitle.title = 'Reviews';
@@ -192,18 +192,6 @@ createReviewHTML = (review) => {
 
 
   /**
-   * reviews date written accessibilities
-   */
-  const date = document.createElement('p');
-  date.innerHTML = review.date;
-  date.className = 'review-date';
-  date.setAttribute('aria-labelledby', review.date);
-  date.setAttribute('aria-live', 'polite');
-  date.style.width =  '50%';
-  date.title = review.date;
-  li.appendChild(date);
-
-  /**
    * reviews authors accessibilities
    */
   const name = document.createElement('p');
@@ -215,6 +203,19 @@ createReviewHTML = (review) => {
   // name.appendChild(date);
   name.style.width =  '50%';
   li.appendChild(name);
+
+
+  /**
+   * reviews date written accessibilities
+   */
+  const date = document.createElement('p');
+  date.innerHTML = review.date;
+  date.className = 'review-date';
+  date.setAttribute('aria-labelledby', review.date);
+  date.setAttribute('aria-live', 'polite');
+  date.style.width =  '50%';
+  date.title = `This review was written on ${review.date} by ${review.name}`;
+  li.appendChild(date);
 
    /**
     * this to combine both the author's comment/review and the date he/she commented
@@ -263,7 +264,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   li.innerHTML = restaurant.name;
   li.setAttribute('aria-labelledby', restaurant.name);
   li.setAttribute('aria-live', 'polite');
-  li.title = restaurant.name;
+  li.title = `${restaurant.name}'s restaurant`;
   breadcrumb.appendChild(li);
 }
 
